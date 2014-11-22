@@ -1,6 +1,122 @@
 extends layout
+block stylesheet
 
+block scripts
 block content
-  h1= title
-  p Welcome to #{title}
-  div#container
+  .promo_area
+    .meteor-slides.navprevnext
+      ul.meteor-nav
+        li.prev
+          a(href='#') Previous
+        li.next
+          a(href='#') Next
+      .promo_wrap
+        .slides
+          .slide
+            a(href='#', title='promo1')
+              img(src='/images/promo/p1.jpg', alt='promo1', title='promo1')
+            .title
+              p
+                a(href='#', title='promo1') promo 1 text
+          .slide
+            a(href='#', title='promo2')
+              img(src='/images/promo/p2.jpg', alt='promo2', title='promo2')
+            .title
+              p
+                a(href='#', title='promo2') promo 2 text
+          .slide
+            a(href='#', title='promo3')
+              img(src='/images/promo/p3.jpg', alt='promo3', title='promo3')
+            .title
+              p
+                a(href='#', title='promo3') promo 3 text
+  .copyrights
+    | Collect from
+    a(href='http://www.cssmoban.com/') Website Template
+  // Rest content of main area
+  .marg.main
+    .con
+      .con_t
+      .con_bg
+        .con_wrap
+          // column #1
+          .block
+            .btitle About us
+            div
+              img(src='/images/about_us.jpg', alt='About us', title='About us')
+            .bcon
+              div
+                | About us - description, about us - description, about us - description
+                a.continue(href='#') continue
+          // column #2
+          .block
+            .btitle Recent popular
+            .post
+              .head
+                span 06-20-2011
+                span.s |
+                span
+                  a(href='#')
+                    b 1
+                    span comment
+              h3.title
+                a(href='#/how-to-create-water-drops-effect-using-html5-canvas/') How to create water Ripple effect using HTML5 canvas
+              .con
+                p
+                  | Today we continue JavaScript examples, and our article will about using javascript in modeling of water effects. This will emulation of water drops at images.
+                  a.continue(href='#/how-to-create-water-drops-effect-using-html5-canvas/') Continue
+            .post
+              .head
+                span 06-20-2011
+                span.s |
+                span
+                  a(href='#')
+                    b 1
+                    span comment
+              h3.title
+                a(href='#/flare-lens/') Cross-browser flare lens effect using javascrip
+              .con
+                p
+                  | Today&grave;s lesson pretty entertaining, we&grave;ll learn how to make a flare lens effect. I hope you know what it is, but if not - just look our online demo. To achieve this effect, we need several images - lenses.
+                  a.continue(href='#/flare-lens/') Continue
+          // column #3
+          .block
+            .btitle All posts
+            ul.snews
+              li
+                a(href='#')
+                  .img
+                    img(src='/images/tutorial.png', alt='', title='')
+                  .con
+                    p Short description text #1
+                br.clear
+              li
+                a(href='#')
+                  .img
+                    img(src='/images/tutorial.png', alt='', title='')
+                  .con
+                    p Short description text #2
+                br.clear
+              li
+                a(href='#')
+                  .img
+                    img(src='/images/tutorial.png', alt='', title='')
+                  .con
+                    p Short description text #3
+                br.clear
+              li
+                a(href='#')
+                  .img
+                    img(src='/images/tutorial.png', alt='', title='')
+                  .con
+                    p Short description text #4
+                br.clear
+              li
+                a(href='#')
+                  .img
+                    img(src='/images/tutorial.png', alt='', title='')
+                  .con
+                    p Short description text #5
+                br.clear
+          .clear
+      .con_b

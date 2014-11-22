@@ -1,7 +1,125 @@
 doctype html
-html
+html(lang='zh-cn')
   head
-    title= title
-    link(rel='stylesheet', href='/css/style.css')
+    meta(charset='UTF-8')
+    title=settings.title
+    link(rel='stylesheet', href='/css/style.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='/css/menu.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='/css/meteor-slides.css', type='text/css', media='screen')
+    block stylesheet
+    script(src='/js/jquery.js', type='text/javascript')
+    script(src='/js/jquery.cycle.all.js', type='text/javascript')
+    script(src='/js/script.js', type='text/javascript')
+    script(src='/js/slideshow.js', type='text/javascript')
+    block scripts
   body
-    block content
+    .top
+    .mid
+    .bottom
+    // Defining the header section of the page
+    header
+      .marg
+        .header
+          .logo
+            a(href='#', title=settings.title)=settings.title
+          .nav
+            // Defining the navigation menu
+            ul
+              li.current
+                a(href='#/')
+                  span.l
+                  span.m 主页
+                  span.r
+              li
+                a(href='#/')
+                  span.l
+                  span.m 开发语言
+                  span.r
+                ul.sub-menu
+                  li
+                    a(href='#/category/html-css/') HTML / CSS
+                  li
+                    a(href='#/category/jquery/') JS / jQuery
+                  li
+                    a(href='#/category/php/') PHP
+                  li
+                    a(href='#/category/mysql/') MySQL
+                  li
+                    a(href='#/category/xslt/') XSLT
+                  li
+                    a(href='#/category/ajax/') Ajax
+              li
+                a(href='#/tag/html5/')
+                  span.l
+                  span.m Tags
+                  span.r
+                ul.sub-menu
+                  li
+                    a(href='#/tag/animation/') animation
+                  li
+                    a(href='#/tag/html5/') html5
+                  li
+                    a(href='#/tag/captcha/') captcha
+                  li
+                    a(href='#/tag/gallery/') gallery
+                  li
+                    a(href='#/tag/animation/') animation
+              li
+                a(href='#/creating-nice-clean-html-css-website-layout-3-dark-theme/')
+                  span.l
+                  span.m Back
+                  span.r
+            .clear
+    // Defining the main content section of the page
+    .content
+      block content
+    footer
+      // Defining the footer section of the page
+      .footer
+        .footer_wrap
+          .wcont
+            h3.title LinkBlock#1
+            ul
+              li
+                a(href='#', title='link 1') Link #1
+              li
+                a(href='#', title='link 2') Link #2
+              li
+                a(href='#', title='link 3') Link #3
+              li
+                a(href='#', title='link 4') Link #4
+              li
+                a(href='#', title='link 5') Link #5
+          .wcont
+            h3.title LinkBlock#2
+            ul
+              li
+                a(href='#', title='link 1') Link #1
+              li
+                a(href='#', title='link 2') Link #2
+              li
+                a(href='#', title='link 3') Link #3
+              li
+                a(href='#', title='link 4') Link #4
+              li
+                a(href='#', title='link 5') Link #5
+          .wcont
+            h3.title LinkBlock#3
+            ul
+              li
+                a(href='#', title='link 1') Link #1
+              li
+                a(href='#', title='link 2') Link #2
+              li
+                a(href='#', title='link 3') Link #3
+              li
+                a(href='#', title='link 4') Link #4
+              li
+                a(href='#', title='link 5') Link #5
+          .clear
+      .foot
+        .foot_wrap
+          | Dark Theme #3 &copy; 2011 |
+          a(href='#') Privacy
+          |  - Collect from
+          a(href='http://www.cssmoban.com/', title='网页模板', target='_blank') &#x7F51;&#x9875;&#x6A21;&#x677F;
