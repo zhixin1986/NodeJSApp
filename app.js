@@ -3,11 +3,13 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+//如果要使用session，需要单独包含这个模块
+var session = require('express-session');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var admin = require('./routes/admin');
 var app = express();
 
 // view engine setup
@@ -20,12 +22,13 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser("zhixin1986"));
+app.use(session({ secret: "andylau" }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-
+app.use('/admin', admin);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

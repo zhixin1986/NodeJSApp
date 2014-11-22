@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title=settings.title
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    meta(content='', name='description')
+    meta(content='', name='author')
+    link(href='/media/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='/media/css/bootstrap-responsive.min.css', rel='stylesheet', type='text/css')
+    link(href='/media/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='/media/css/style-metro.css', rel='stylesheet', type='text/css')
+    link(href='/media/css/style.css', rel='stylesheet', type='text/css')
+    link(href='/media/css/style-responsive.css', rel='stylesheet', type='text/css')
+    link#style_color(href='/media/css/default.css', rel='stylesheet', type='text/css')
+    link(href='/media/css/uniform.default.css', rel='stylesheet', type='text/css')
+    link(href='/media/css/login.css', rel='stylesheet', type='text/css')
+  body.login
+    .logo
+      img(src='/media/image/logo-big.png', alt='')
+    .content
+      form.form-vertical.login-form(action='index.html')
+        h3.form-title 用户登入
+        .alert.alert-error.hide
+          button.close(data-dismiss='alert')
+          span 请输入账号密码登入系统
+        .control-group
+          // ie8, ie9 does not support html5 placeholder, so we just show field title for that
+          label.control-label.visible-ie8.visible-ie9 用户名
+          .controls
+            .input-icon.left
+              i.icon-user
+              input.m-wrap.placeholder-no-fix(type='text', placeholder='用户名', name='username')
+        .control-group
+          label.control-label.visible-ie8.visible-ie9 密码
+          .controls
+            .input-icon.left
+              i.icon-lock
+              input.m-wrap.placeholder-no-fix(type='password', placeholder='密码', name='password')
+        .form-actions
+          label.checkbox
+            input(type='checkbox', name='remember', value='1')
+            |  记住账号
+          button.btn.green.pull-right(type='submit')
+            | 登入
+            i.m-icon-swapright.m-icon-white
+    .copyright
+      | 2013 &copy; zhixin1986@gmail.com.
+
